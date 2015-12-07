@@ -1,54 +1,38 @@
-\documentclass[t, 8pt]{beamer}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[frenchb]{babel}
-% pour un pdf lisible à l'écran
-% il y a d'autres choix possibles 
-\usepackage{pslatex}
-%\usepackage{ae}
-\usepackage{pifont}
-\usetheme{Warsaw}%Avec barre de navigation : {Hannover}{Goettingen}{Marburg}{Berkeley}{PaloAlto}, Sans barre de navigation : {default}{Pittburgh}{Rochester}{Bergen}{Boadilla}{Madrid}{AnnArbor}{CambridgeUS}
-\usecolortheme{seahorse}
-\usefonttheme{professionalfonts}
+\documentclass[t,8pt]{beamer}
+% La taille de la feuille de papier dans Beamer est de 128mm sur 96mm avec un ratio de 4:3
+
+\input{header}
+
+\author{JL H.}
+\date{\today}
+\title{TOPO DICOM}
 
 \begin{document}
-\title{TOPO DICOM}
+\logo{\includegraphics[scale=0.1]{illustrations/logo-button.png}}
+% \logo{\insertframenumber/\inserttotalframenumber} insère le numero de la page sur le nombre total de page, à la place du logo
+\frame[plain]{\titlepage}
+ 
+\section*{Sommaire}
+\begin{frame}[c]
+  \tableofcontents
+\end{frame}
+
 \section{Le format DICOM}
+
 \subsection{La norme}
 
-\begin{frame}{DICOM}
-\begin{block}{mon block}
-test
-\end{block}
-Dicom (Digital Imaging and Communication in Medicine) est un standard international pour les images médicales et les informations s'y référant. Il définie un ensemble de services qui constitue la couche application des échanges de données médicales du type imageries et information liées (Compte-rendu d'examen, Diagnostique, etc.). \cite{nema15:_dicom_ps3}
-Plusieurs services sont disponibles autour du format :
-\begin{itemize}
-\item[\ding{213}] l'impression
-\item[\ding{213}] le stockage
-\item[\ding{213}] l'affichage
-\item[\ding{213}] l'acquisition
-\end{itemize}
-%Les différents services sont fournis par des serveurs ou des systèmes :
-%- PACS (Picture Archiving and Communication System)
-%- RIS (Radiology Information System)
-%- HIS (Hospital Information System)
-\end{frame}
+\input{diapo1}
 
-\begin{frame}[fragile]
-\frametitle{DICOM}
-Texte diapo 2
-\end{frame}
+\subsection{Les Services}
 
-\begin{frame}[b]
-\frametitle{DICOM}
-\framesubtitle{PACS}
-Texte diapo 3
-\end{frame}
+\input{diapo2}
 
-\begin{frame}[b]
-\frametitle{DICOM}
-\framesubtitle{Bibliographie}
-\bibliography{biblio}
-\bibliographystyle{plain}
-\end{frame}
+\subsection{Connection}
+
+\input{diapo3}
+
+\subsection{Les réseaux}
+
+\input{biblio}
+
 \end{document}

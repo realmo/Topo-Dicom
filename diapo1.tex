@@ -1,0 +1,28 @@
+\setbeamertemplate{frametitlecontinuation}{\insertcontinuationcount}%{\insertcontinuationcountroman} % Si la page contient trop de texte une 2e diapo sera créée automatiquement en les numérotant avec des chiffres romains {\insertcontinuationcount} affichera des chiffres arabe
+
+\begin{frame}% [allowframebreaks=98]  %[plain] s'il on ne veut aucun décors autour de la diapo
+\frametitle{DICOM} % affiche le titre de la diapo
+%\begin{alertblock}{mon block} % exampleblock ou block ou alertblock
+%\end{alertblock}
+\begin{columns}[t]
+  \begin{column}[t]{5cm}
+    Dicom (Digital Imaging and Communication in Medicine) est un standard international pour les images médicales et les informations s'y référant. Il définie un ensemble de services qui constitue la couche application des échanges de données médicales du type imageries et information liées (Compte-rendu d'examen, Diagnostique, etc.)\cite{nema15:_dicom_ps3}. 
+Plusieurs services sont disponibles autour du format :
+\begin{itemize}
+\item[\ding{213}]<1-> l'impression
+\item[\ding{213}]<2-> le stockage
+\item[\ding{213}]<3-> \textbf<4>{l'affichage}
+\item[\ding{213}]<5-> l'acquisition
+\end{itemize}
+  \end{column}
+  \begin{column}[t]{5cm}<6->
+   Les différents services sont fournis par des serveurs ou des systèmes :
+\begin{itemize}
+\item PACS (Picture Archiving and Communication System)
+\item  RIS (Radiology Information System)
+\item  HIS (Hospital Information System)
+\end{itemize}
+  \end{column}
+\end{columns}
+
+\end{frame}
